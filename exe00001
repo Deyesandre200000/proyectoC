@@ -88,8 +88,8 @@ int soNumeros(char texto[]) {
 }
 
 // Validação simples de email
-int validarEmail(char email[]) {
-    return (strchr(email,'@') && strchr(email,'.'));
+int validarEmail(char email[], char hotmail[], char gmail[], char yahoo[], char outlook[], char uol[], char icloud[]) {
+    return (strchr(email,'@') && strchr(email,hotmail,gmail,icloud,uol,'.'));
 }
 
 // Validação de data DD/MM/AAAA
@@ -136,17 +136,18 @@ void desenharMarco() {
     gotoxy(largura,25); printf("+");
 
     // Titulo centrado
-    gotoxy(23,2);
-    printf("SISTEMA PROFISSIONAL DE CLIENTES");
+    gotoxy(25,2);
+    printf("CADASTRO DE CLIENTES");
 
     // Subtitulo centrado
     gotoxy(34,3);
-    printf("Versao 3.0");
+    printf("Versao 0.1");
 
     // Rodape equilibrado
     gotoxy(3,24);
     printf("UNICV - 2026");
-
+    gotoxy(3,45);
+    printf("Desenvolvido por karmabeast_IA");
     gotoxy(52,24);
     printf("Todos os direitos reservados");
 }
